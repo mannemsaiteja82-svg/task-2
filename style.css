@@ -76,3 +76,21 @@
     }
 }
 
+/* Core Image Bounds Protection */
+#about img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Ensure the layout structure keeps content items aligned correctly side-by-side */
+@media (min-width: 1024px) {
+    #about {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Portfolio</title>
-    <!-- Tailwind CSS Engine Link -->
+    <title>Portfolio</title>
+    <!-- FIXED: Tailwind CSS Engine Link -->
     <script src="https://jsdelivr.net"></script>
-    <!-- ScrollReveal Core JavaScript Engine -->
+    <!-- FIXED: ScrollReveal Core JavaScript Engine -->
     <script src="https://unpkg.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,9 +14,7 @@
 
     <!-- Active High-Visibility Cherry Blossom and Red Clover Rendering Canvas Area -->
     <div id="canvas-container" class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <!-- Structural Clover Asset Node -->
         <div class="clover" style="left: 15%; animation-delay: 0s; animation-duration: 8s;">♣</div>
-        <!-- Structural Petal Asset Node -->
         <div class="petal" style="left: 35%; animation-delay: 2s; animation-duration: 11s;"></div>
         <div class="clover" style="left: 55%; animation-delay: 1s; animation-duration: 7s;">♣</div>
         <div class="petal" style="left: 75%; animation-delay: 4s; animation-duration: 9s;"></div>
@@ -47,14 +45,17 @@
             <!-- Target Section Pane: Introduction Profile Grid -->
             <section id="about" class="reveal-left min-h-[70vh] flex flex-col lg:flex-row items-center justify-center gap-12">
                 <div class="w-60 h-60 md:w-72 md:h-72 rounded-3xl border-2 border-[#e11d48] overflow-hidden profile-shadow rotate-3 shrink-0">
+                    <img src="PHOTO.jpg" alt="MANNEM SAITEJA" class="w-full h-full object-cover" />
                     
                 </div>
                 <div class="space-y-4 text-center lg:text-left">
                     <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white">
-                        System User: <span class="text-[#f472b6] font-serif">[Your Name]</span>
+                        <!-- CHANGE THIS: Replace '[Your Name]' with your actual name -->
+                        System User: <span class="text-[#f472b6] font-serif">MANNEM SAITEJA</span>
                     </h1>
+                    <!-- CHANGE THIS: Write your custom introduction bio text below -->
                     <p class="text-gray-400 max-w-xl leading-relaxed text-sm md:text-base">
-                        Engineered architecture portfolio platform deployed directly onto cloud systems with strict isolated aesthetic visual layouts.
+                        I’m a cloud solutions engineer passionate about building scalable systems and designing visually striking portfolio platforms. My expertise spans AWS, CI/CD pipelines, and modern UI aesthetics.
                     </p>
                 </div>
             </section>
@@ -63,24 +64,35 @@
             <section id="skills" class="reveal-right max-w-3xl mx-auto">
                 <h2 class="text-2xl font-extrabold border-b-2 border-[#e11d48] w-fit pb-2 mb-10 tracking-wide text-white uppercase">System Metrics</h2>
                 <div class="space-y-6">
+                    
+                    <!-- SKILL 1 -->
                     <div>
                         <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2">
-                            <span>UI Design & Frontend Components</span>
+                            <!-- CHANGE THIS: Your Skill Name -->
+                            <span>AWS</span>
+                            <!-- CHANGE THIS: Your Skill Number Display -->
                             <span class="text-[#e11d48]">95%</span>
                         </div>
                         <div class="w-full bg-black/50 h-2 rounded-full overflow-hidden border border-gray-800">
+                            <!-- CHANGE THIS: Modify style="width: 95%" to match your metric number exactly -->
                             <div class="bg-gradient-to-r from-[#e11d48] to-[#f472b6] h-full rounded-full" style="width: 95%"></div>
                         </div>
                     </div>
+                    
+                    <!-- SKILL 2 -->
                     <div>
                         <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2">
-                            <span>AWS Static Cloud Routing Integration</span>
-                            <span class="text-[#e11d48]">85%</span>
+                            <!-- CHANGE THIS: Your Skill Name -->
+                            <span>DOCKER</span>
+                            <!-- CHANGE THIS: Your Skill Number Display -->
+                            <span class="text-[#e11d48]">70%</span>
                         </div>
                         <div class="w-full bg-black/50 h-2 rounded-full overflow-hidden border border-gray-800">
+                            <!-- CHANGE THIS: Modify style="width: 85%" to match your metric number exactly -->
                             <div class="bg-gradient-to-r from-[#e11d48] to-[#f472b6] h-full rounded-full" style="width: 85%"></div>
                         </div>
                     </div>
+                    
                 </div>
             </section>
 
@@ -88,14 +100,23 @@
             <section id="interests" class="reveal-bottom max-w-4xl mx-auto">
                 <h2 class="text-2xl font-extrabold border-b-2 border-[#e11d48] w-fit pb-2 mb-10 tracking-wide text-white uppercase">Focus Node Points</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- INTEREST CARD 1 -->
                     <div class="interactive-card bg-metallic-black/80 border border-gray-800 p-6 rounded-2xl">
-                        <h3 class="text-lg font-bold text-[#f472b6] mb-2">Anime Aesthetic UI</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Configuring crisp, stylized interface variants blending stark metallic shades with fluid environmental micro-interactions.</p>
+                        <!-- CHANGE THIS: Your Interest Title -->
+                        <h3 class="text-lg font-bold text-[#f472b6] mb-2">NOVALS</h3>
+                        <!-- CHANGE THIS: Your Interest Description -->
+                        <p class="text-gray-400 text-xs leading-relaxed">Exploring novels to draw inspiration for narrative-driven design and structured problem-solving, blending storytelling with technical execution.</p>
                     </div>
+                    
+                    <!-- INTEREST CARD 2 -->
                     <div class="interactive-card bg-metallic-black/80 border border-gray-800 p-6 rounded-2xl">
+                        <!-- CHANGE THIS: Your Interest Title -->
                         <h3 class="text-lg font-bold text-[#f472b6] mb-2">Automated CI/CD Pipelines</h3>
+                        <!-- CHANGE THIS: Your Interest Description -->
                         <p class="text-gray-400 text-xs leading-relaxed">Developing real-time continuous deployment architecture triggers linked via programmatic cloud webhooks safely.</p>
                     </div>
+                    
                 </div>
             </section>
 
@@ -105,4 +126,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

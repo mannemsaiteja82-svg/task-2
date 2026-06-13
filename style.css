@@ -1,17 +1,52 @@
-/* Color Palette Separation Directives */
+/* ==========================================================================
+   1. COLOR PALETTE SEPARATION DIRECTIVES
+   ========================================================================== */
 .bg-dark-navy {
-    background-color: #0b1120; /* Deep Dark Space Navy Blue Canvas */
+    background-color: #0b1120 !important; /* Deep Dark Space Navy Blue Canvas */
 }
 
 .bg-metallic-black {
-    background-color: #111317; /* Stark Mechanical Dark Matte Iron Base */
+    background-color: #111317 !important; /* Stark Mechanical Dark Matte Iron Base */
 }
 
-/* Graphic Layer Styling Components */
-.profile-shadow {
-    box-shadow: 0 0 25px rgba(225, 29, 72, 0.4);
+/* ==========================================================================
+   2. FIXED CORNER AVATAR FRAME (FORCES SMALL SIZE PINNED TO TOP RIGHT)
+   ========================================================================== */
+.corner-avatar-frame {
+    position: absolute !important;
+    top: 24px !important;
+    right: 24px !important;
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    display: block !important;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.5);
 }
 
+@media (min-width: 768px) {
+    .corner-avatar-frame {
+        top: 32px !important;
+        right: 48px !important;
+        width: 110px !important;
+        height: 110px !important;
+        max-width: 110px !important;
+        max-height: 110px !important;
+    }
+}
+
+/* Forces image rendering mechanics inside the circular clip bounds cleanly */
+.profile-img-element {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* ==========================================================================
+   3. GRAPHIC LAYER SHYLING AND INTERACTIONS
+   ========================================================================== */
 .nav-item-link {
     color: #9ca3af;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,10 +68,12 @@
     transform: scale(1.02);
 }
 
-/* Vivid Crimson Red Clover Element Simulation */
+/* ==========================================================================
+   4. AMBIENT PHYSICS PARTICLE FALLING ANIMATION LOOP
+   ========================================================================== */
 .clover {
     position: absolute;
-    color: #e11d48; /* Red Clover Core Tone */
+    color: #e11d48;
     font-size: 24px;
     font-family: Arial, sans-serif;
     text-shadow: 0 0 10px rgba(225, 29, 72, 0.8);
@@ -45,7 +82,6 @@
     animation: driftFall linear infinite;
 }
 
-/* Vivid Cherry Blossom Pink Petal Element Simulation */
 .petal {
     position: absolute;
     background: linear-gradient(135deg, #f472b6 0%, #db2777 100%);
@@ -58,39 +94,10 @@
     animation: driftFall linear infinite;
 }
 
-/* Ambient Physics Animation Path Logic Loop */
 @keyframes driftFall {
-    0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.75;
-    }
-    90% {
-        opacity: 0.75;
-    }
-    100% {
-        transform: translateY(105vh) translateX(120px) rotate(450deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.75; }
+    90% { opacity: 0.75; }
+    100% { transform: translateY(105vh) translateX(120px) rotate(450deg); opacity: 0; }
 }
 
-/* Core Image Bounds Protection */
-#about img {
-    max-width: 25% !important;
-    max-height: 25% !important;
-    width: 25% !important;
-    height: 25% !important;
-    object-fit: cover !important;
-}
-
-/* Ensure the layout structure keeps content items aligned correctly side-by-side */
-@media (min-width: 1024px) {
-    #about {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-}

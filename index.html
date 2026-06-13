@@ -1,128 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- FIXED: Tailwind CSS Engine Link -->
-    <script src="https://jsdelivr.net"></script>
-    <!-- FIXED: ScrollReveal Core JavaScript Engine -->
+    <title>MANNEM SAITEJA | Cloud Solutions Engineer Portfolio</title>
+    <!-- Working Tailwind CSS Play Engine -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- ScrollReveal Core JavaScript Engine -->
     <script src="https://unpkg.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-dark-navy min-h-screen relative overflow-x-hidden">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-navy': '#060a13',
+                        'metallic-black': '#0b111e',
+                        'cyber-pink': '#f472b6',
+                        'neon-rose': '#e11d48',
+                    }
+                }
+            }
+        }
+    </script>
 
-    <!-- Active High-Visibility Cherry Blossom and Red Clover Rendering Canvas Area -->
-    <div id="canvas-container" class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div class="clover" style="left: 15%; animation-delay: 0s; animation-duration: 8s;">♣</div>
-        <div class="petal" style="left: 35%; animation-delay: 2s; animation-duration: 11s;"></div>
-        <div class="clover" style="left: 55%; animation-delay: 1s; animation-duration: 7s;">♣</div>
-        <div class="petal" style="left: 75%; animation-delay: 4s; animation-duration: 9s;"></div>
-        <div class="clover" style="left: 90%; animation-delay: 3s; animation-duration: 12s;">♣</div>
+    <style>
+        /* Pure CSS Falling Cherry Blossoms & Clovers */
+        @keyframes fall {
+            0% {
+                transform: translateY(-5vh) translateX(0px) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% {
+                transform: translateY(105vh) translateX(80px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .petal {
+            position: absolute;
+            background: linear-gradient(135deg, #f472b6, #e11d48);
+            border-radius: 100% 0% 100% 100%;
+            width: 10px;
+            height: 10px;
+            animation: fall linear infinite;
+        }
+
+        .clover-leaf {
+            position: absolute;
+            color: #10b981;
+            font-size: 1.2rem;
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+            animation: fall linear infinite;
+        }
+
+        /* Ambient Styling Enhancements */
+        .profile-shadow {
+            box-shadow: 0 0 30px rgba(225, 29, 72, 0.35), inset 0 0 15px rgba(244, 114, 182, 0.1);
+        }
+        
+        .interactive-card {
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .interactive-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(225, 29, 72, 0.25);
+            border-color: #f472b6;
+        }
+    </style>
+</head>
+<body class="bg-dark-navy text-gray-200 min-h-screen relative overflow-x-hidden antialiased selection:bg-neon-rose selection:text-white">
+
+    <!-- Active High-Visibility Canvas Rendering Engine -->
+    <div id="canvas-container" class="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-950 via-dark-navy to-black">
+        <!-- Optimized Particle Distribution Streams -->
+        <div class="clover-leaf" style="left: 12%; animation-delay: 0s; animation-duration: 9s;">♣</div>
+        <div class="petal" style="left: 32%; animation-delay: 2s; animation-duration: 11s;"></div>
+        <div class="clover-leaf" style="left: 52%; animation-delay: 1s; animation-duration: 8s;">♣</div>
+        <div class="petal" style="left: 72%; animation-delay: 4s; animation-duration: 13s;"></div>
+        <div class="petal" style="left: 88%; animation-delay: 3s; animation-duration: 10s;"></div>
     </div>
 
-    <!-- Main Flex Viewport Workspace -->
+    <!-- Main Flex Viewport Framework -->
     <div class="flex flex-col md:flex-row min-h-screen relative z-10">
         
-        <!-- Left Column Component Pane: Rigid Structural Metallic Black Sidebar Grid -->
-        <aside class="w-full md:w-80 bg-metallic-black border-r border-[#db2777]/30 p-8 flex flex-col justify-between shrink-0">
-            <div class="space-y-8">
-                <span class="text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#f472b6] to-[#e11d48]">桜 CLOVER</span>
-                <nav class="flex flex-col space-y-4 text-sm font-semibold tracking-wider uppercase">
-                    <a href="#about" class="nav-item-link">About</a>
-                    <a href="#skills" class="nav-item-link">Skills</a>
-                    <a href="#interests" class="nav-item-link">Interests</a>
+        <!-- Left Column Sidebar Pane: Rigid Tech Structural HUD -->
+        <aside class="w-full md:w-80 bg-metallic-black/95 backdrop-blur-md border-b md:border-b-0 md:border-r border-[#db2777]/20 p-8 flex flex-col justify-between shrink-0 sticky top-0 md:h-screen z-50">
+            <div class="space-y-12">
+                <div class="flex flex-col">
+                    <span class="text-3xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#f472b6] to-[#e11d48] drop-shadow-[0_0_12px_rgba(225,29,72,0.4)]">桜 CLOVER</span>
+                    <span class="text-[9px] font-mono text-neon-rose tracking-[0.35em] uppercase mt-1">System Architecture Core</span>
+                </div>
+                
+                <nav class="flex flex-col space-y-4 text-xs font-mono font-bold tracking-widest uppercase">
+                    <a href="#about" class="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors py-2 border-b border-gray-900/50">
+                        <span class="text-neon-rose group-hover:translate-x-1 transition-transform">//</span> About Node
+                    </a>
+                    <a href="#skills" class="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors py-2 border-b border-gray-900/50">
+                        <span class="text-neon-rose group-hover:translate-x-1 transition-transform">//</span> System Metrics
+                    </a>
+                    <a href="#interests" class="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors py-2 border-b border-gray-900/50">
+                        <span class="text-neon-rose group-hover:translate-x-1 transition-transform">//</span> Focus Points
+                    </a>
                 </nav>
             </div>
-            <footer class="text-xs text-gray-500 font-mono pt-6">
-                &copy; 2026 Developer System.
+            
+            <footer class="text-[10px] text-gray-500 font-mono pt-6 border-t border-gray-900/60 hidden md:block">
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>SYS STATUS: OPERATIONAL</span>
+                </div>
+                <div>&copy; 2026 Developer System.</div>
+                <div class="text-gray-600 mt-1 text-[9px]">DESIGNED FOR MANNEM SAITEJA</div>
             </footer>
         </aside>
 
-        <!-- Right Column Component Pane: Flowing Smooth Deep Dark Blue Main Feed Canvas Area -->
-        <main class="flex-1 px-6 md:px-16 lg:px-24 space-y-32 py-20">
+        <!-- Right Column Viewport Feed Canvas -->
+        <main class="flex-1 px-6 md:px-16 lg:px-24 space-y-36 py-16 md:py-24">
             
-            <!-- Target Section Pane: Introduction Profile Grid -->
-            <section id="about" class="reveal-left min-h-[70vh] flex flex-col lg:flex-row items-center justify-center gap-12">
-                <div class="w-60 h-60 md:w-72 md:h-72 rounded-3xl border-2 border-[#e11d48] overflow-hidden profile-shadow rotate-3 shrink-0 relative">
-                    <img src="PHOTO.jpg" alt="MANNEM SAITEJA" class="w-full h-full object-cover" />
-                    
+            <!-- SECTION 1: Introduction Profile Grid -->
+            <section id="about" class="reveal-target min-h-[70vh] flex flex-col lg:flex-row items-center justify-center gap-12">
+                <!-- Avatar Outer Layout Window -->
+                <div class="w-60 h-60 md:w-72 md:h-72 rounded-3xl border-2 border-[#e11d48] overflow-hidden profile-shadow rotate-3 hover:rotate-0 transition-transform duration-500 shrink-0 relative bg-slate-900 group">
+                    <img src="PHOTO.jpg" alt="MANNEM SAITEJA" class="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://unsplash.com'" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-4 left-4 font-mono text-[9px] text-cyber-pink tracking-widest bg-black/70 px-2 py-1 rounded border border-cyber-pink/20">
+                        ID // SAITEJA_01
+                    </div>
                 </div>
-                <div class="space-y-4 text-center lg:text-left">
-                    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white">
-                        <!-- CHANGE THIS: Replace '[Your Name]' with your actual name -->
-                        System User: <span class="text-[#f472b6] font-serif">MANNEM SAITEJA</span>
+                
+                <!-- Biography Interface Window -->
+                <div class="space-y-5 text-center lg:text-left max-w-xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neon-rose/10 border border-neon-rose/20 text-[11px] font-mono text-cyber-pink uppercase tracking-wider">
+                        Live Environment Integration
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white uppercase">
+                        System User: <br class="hidden sm:inline"/><span class="text-[#f472b6] font-serif tracking-normal normal-case block sm:mt-1">MANNEM SAITEJA</span>
                     </h1>
-                    <!-- CHANGE THIS: Write your custom introduction bio text below -->
-                    <p class="text-gray-400 max-w-xl leading-relaxed text-sm md:text-base">
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base border-l-2 lg:border-l-4 border-neon-rose/40 pl-0 lg:pl-6 italic">
                         I’m a cloud solutions engineer passionate about building scalable systems and designing visually striking portfolio platforms. My expertise spans AWS, CI/CD pipelines, and modern UI aesthetics.
                     </p>
                 </div>
             </section>
 
-            <!-- Target Section Pane: Functional Linear Metascore Skill Levels Bar Grid -->
-            <section id="skills" class="reveal-right max-w-3xl mx-auto">
-                <h2 class="text-2xl font-extrabold border-b-2 border-[#e11d48] w-fit pb-2 mb-10 tracking-wide text-white uppercase">System Metrics</h2>
-                <div class="space-y-6">
-                    
-                    <!-- SKILL 1 -->
-                    <div>
-                        <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2">
-                            <!-- CHANGE THIS: Your Skill Name -->
-                            <span>AWS</span>
-                            <!-- CHANGE THIS: Your Skill Number Display -->
-                            <span class="text-[#e11d48]">95%</span>
-                        </div>
-                        <div class="w-full bg-black/50 h-2 rounded-full overflow-hidden border border-gray-800">
-                            <!-- CHANGE THIS: Modify style="width: 95%" to match your metric number exactly -->
-                            <div class="bg-gradient-to-r from-[#e11d48] to-[#f472b6] h-full rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- SKILL 2 -->
-                    <div>
-                        <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2">
-                            <!-- CHANGE THIS: Your Skill Name -->
-                            <span>DOCKER</span>
-                            <!-- CHANGE THIS: Your Skill Number Display -->
-                            <span class="text-[#e11d48]">70%</span>
-                        </div>
-                        <div class="w-full bg-black/50 h-2 rounded-full overflow-hidden border border-gray-800">
-                            <!-- CHANGE THIS: Modify style="width: 85%" to match your metric number exactly -->
-                            <div class="bg-gradient-to-r from-[#e11d48] to-[#f472b6] h-full rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
+            <!-- SECTION 2: Functional Linear Metascore Skill Levels Bar Grid -->
+            <section id="skills" class="reveal-target max-w-3xl mx-auto w-full">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-2xl font-extrabold tracking-wide text-white uppercase font-mono text-sm md:text-xl">// System Metrics</h2>
+                    <div class="h-[1px] bg-gradient-to-r from-neon-rose via-transparent to-transparent flex-1"></div>
                 </div>
-            </section>
-
-            <!-- Target Section Pane: Modular Dynamic Cards Grid -->
-            <section id="interests" class="reveal-bottom max-w-4xl mx-auto">
-                <h2 class="text-2xl font-extrabold border-b-2 border-[#e11d48] w-fit pb-2 mb-10 tracking-wide text-white uppercase">Focus Node Points</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <!-- INTEREST CARD 1 -->
-                    <div class="interactive-card bg-metallic-black/80 border border-gray-800 p-6 rounded-2xl">
-                        <!-- CHANGE THIS: Your Interest Title -->
-                        <h3 class="text-lg font-bold text-[#f472b6] mb-2">NOVALS</h3>
-                        <!-- CHANGE THIS: Your Interest Description -->
-                        <p class="text-gray-400 text-xs leading-relaxed">Exploring novels to draw inspiration for narrative-driven design and structured problem-solving, blending storytelling with technical execution.</p>
+                
+                <div class="space-y-8 bg-metallic-black/50 p-6 md:p-8 rounded-2xl border border-gray-900/60 backdrop-blur-sm">
+                    <!-- SKILL 1: AWS -->
+                    <div>
+                        <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2.5">
+                            <span class="text-gray-300 flex items-center gap-2"><span class="text-neon-rose">⚡</span> AWS</span>
+                            <span class="text-[#e11d48] font-bold">95%</span>
+                        </div>
+                        <div class="w-full bg-black/60 h-2.5 rounded-full overflow-hidden border border-gray-800/80 p-[1px]">
+                            <div class="bg-gradient-to-r from-[#e11d48] to-[#f472b6] h-full rounded-full shadow-[0_0_8px_#e11d48]" style="width: 95%"></div>
+                        </div>
                     </div>
                     
-                    <!-- INTEREST CARD 2 -->
-                    <div class="interactive-card bg-metallic-black/80 border border-gray-800 p-6 rounded-2xl">
-                        <!-- CHANGE THIS: Your Interest Title -->
-                        <h3 class="text-lg font-bold text-[#f472b6] mb-2">Automated CI/CD Pipelines</h3>
-                        <!-- CHANGE THIS: Your Interest Description -->
-                        <p class="text-gray-400 text-xs leading-relaxed">Developing real-time continuous deployment architecture triggers linked via programmatic cloud webhooks safely.</p>
-                    </div>
-                    
-                </div>
-            </section>
+                    <!-- SKILL 2: DOCKER -->
+                    <div>
+                        <div class="flex justify-between text-xs uppercase font-mono tracking-widest mb-2.5">
+                            <span class="text-gray-300 flex items-center gap-2"><span class="text-cyber-pink">⚡</span> DOCKER</span>
 
-        </main>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>

@@ -1,136 +1,154 @@
-@import url('https://googleapis.com');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mannem Saiteja | Portfolio</title>
+    <!-- Icon and Font Assets -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://googleapis.com">
+    <!-- Link to your working external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
+    <!-- Design Perfectionism Blueprint Architecture Background Layout -->
+    <div class="blueprint-bg">
+        <div class="blueprint-grid"></div>
+        <div class="blueprint-line line-v1"></div>
+        <div class="blueprint-line line-v2"></div>
+        <div class="blueprint-line line-h1"></div>
+        <div class="blueprint-line line-h2"></div>
+        <div class="blueprint-crosshair cx1">+</div>
+        <div class="blueprint-crosshair cx2">+</div>
+    </div>
 
-body {
-    background-color: #000000;
-    color: #e2e8f0;
-    overflow-x: hidden;
-    perspective: 1000px; /* Activates global 3D space tracking matrix */
-}
+    <!-- Glowing Background Ambient Overlays -->
+    <div class="bg-animation"></div>
 
-/* Engineering blueprint layout background canvas */
-.blueprint-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #020617;
-    z-index: -2;
-    overflow: hidden;
-}
+    <header>
+        <nav>
+            <h2 class="logo">MS</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#passions">Passions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Micro design grid pattern matrix line structures (unmixed) */
-.blueprint-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(15, 32, 67, 0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 32, 67, 0.4) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- 3D Isometric Image Structure Wrapper -->
+        <div class="hero-image-wrapper">
+            <div class="hero-image-3d-ring"></div>
+            <div class="hero-image">
+                <img src="PHOTO.jpg" alt="saiteja">
+            </div>
+        </div>
 
-/* Sharp structural geometric marker lines to show design layout grids */
-.blueprint-line {
-    position: absolute;
-    background: rgba(239, 68, 68, 0.12); /* Crimson technical alignment lines */
-    box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
-}
+        <div class="hero-content">
+            <!-- AWS Target Badge Component -->
+            <div class="aws-badge">
+                <i class="fas fa-layer-group"></i> Pursuing AWS Certified Solutions Architect – Associate
+            </div>
+            
+            <h1>Hello, I'm <span>saiteja</span></h1>
+            <h2>I'm a Developer & Designer</h2>
 
-.line-v1 { left: 15%; top: 0; width: 1px; height: 100%; }
-.line-v2 { right: 25%; top: 0; width: 1px; height: 100%; background: rgba(0, 212, 255, 0.12); }
-.line-h1 { top: 30%; left: 0; width: 100%; height: 1px; }
-.line-h2 { bottom: 20%; left: 0; width: 100%; height: 1px; background: rgba(0, 212, 255, 0.12); }
+            <p>
+                AWS Cloud Practitioner |
+                Cloud & DevOps Intern |
+                Design Perfectionism |
+                AI Enthusiast
+            </p>
 
-/* Tiny crosshair alignment alignment points */
-.blueprint-crosshair {
-    position: absolute;
-    font-size: 14px;
-    font-family: monospace;
-    color: rgba(255, 255, 255, 0.2);
-    user-select: none;
-}
-.cx1 { left: 15%; top: 30%; transform: translate(-50%, -50%); }
-.cx2 { right: 25%; bottom: 20%; transform: translate(-50%, -50%); color: #ef4444; }
+            <div class="hero-buttons">
+                <a href="resume.pdf" download class="btn">Download Resume</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
-/* Dynamic subtle ambient depth glow circles */
-.bg-animation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 75% 20%, rgba(0, 212, 255, 0.08), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.08), transparent 40%);
-    z-index: -1;
-    pointer-events: none;
-}
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill css-slide-up">
+            <h3>AWS Cloud</h3>
+            <div class="progress"><span style="width:90%"></span></div>
 
-/* ==========================================================================
-   3. 3D Circular Portrait Isometric System Framework
-   ========================================================================== */
-.hero-image-wrapper {
-    position: relative;
-    width: 320px;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-style: preserve-3d;
-    transform: rotateX(15deg) rotateY(-15deg); /* Isometric 3D angle setup */
-    animation: floatingPlatform 6s ease-in-out infinite;
-}
+            <h3>Docker</h3>
+            <div class="progress"><span style="width:85%"></span></div>
 
-/* High-tech 3D light rings that spin underneath the circular photo avatar */
-.hero-image-3d-ring {
-    position: absolute;
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    border: 2px dashed rgba(0, 212, 255, 0.4);
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
-    transform: translateZ(-20px);
-    animation: spinRing 20s linear infinite;
-}
+            <h3>Kubernetes</h3>
+            <div class="progress"><span style="width:45%"></span></div>
 
-.hero-image {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #00d4ff, #ef4444); /* Clean neon split accent boundaries */
-    transform-style: preserve-3d;
-    transform: translateZ(10px);
-    box-shadow: 
-        -10px 15px 30px rgba(0, 0, 0, 0.7),
-        0 0 40px rgba(239, 68, 68, 0.2);
-}
+            <h3>Python</h3>
+            <div class="progress"><span style="width:70%"></span></div>
+        </div>
+    </section>
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%; /* Perfect geometric circle profile shape configuration */
-    background-color: #070f1a;
-    display: block;
-}
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="cards">
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Embedded system and IOT</h3>
+                <p>Drowsiness detection system, featuring automatic active and passive real-time alerting nodes.</p>
+            </div>
 
-/* Multi-axis animation frames */
-@keyframes floatingPlatform {
-    0%, 100% { transform: rotateX(12deg) rotateY(-12deg) translateY(0px); }
-    50% { transform: rotateX(16deg) rotateY(-16deg) translateY(-15px); }
-}
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-house-laptop"></i></div>
+                <h3>Home Automation</h3>
+                <p>Robust structural architecture enabling seamless secure remote control of home appliances.</p>
+            </div>
 
-@keyframes spinRing {
-    from { transform: translateZ(-20px) rotate(0deg); }
-    to { transform: translateZ(-20px) rotate(360deg); }
-}
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI Agents</h3>
+                <p>AI-powered procedural execution scripts, automation tools, and targeted optimization layouts.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Design Perfectionism & Hobbies Section -->
+    <section id="passions">
+        <h2 class="section-title">Design & Passions</h2>
+        <p class="section-subtitle">The creative inspirations that power my engineering logic</p>
+        
+        <div class="passions-grid">
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-bezier-curve"></i></div>
+                <h3>Design Perfectionism</h3>
+                <p>Obsessed with sharp alignment, balanced content structures, responsive layouts, and clean user interfaces.</p>
+            </div>
+
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Novel Devotee</h3>
+                <p>Deeply captivated by complex storylines, worldbuilding mechanics, and structural narratives across epic novels.</p>
+            </div>
+
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-tv"></i></div>
+                <h3>Anime & Art</h3>
+                <p>Inspired by the elite framing layout styles, dynamic kinetic animation, and vivid color schemes of anime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-box css-slide-up">
+            <p><i class="fas fa-envelope" style="color: #ef4444; margin-right: 8px;"></i> Email: mannemsaiteja82@gmail.com</p>
+            <p><i class="fab fa-linkedin" style="color: #00d4ff; margin-right: 8px;"></i> LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></p>
+            <p><i class="fab fa-github" style="color: #ffffff; margin-right: 8px;"></i> GitHub: <a href="https://github.com" target="_blank">://github.com</a></p>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,69 +1,28 @@
-const words = [
-    "Cloud Engineer",
-    "DevOps Engineer",
-    "design perfectionism",
-    "AI Enthusiast"
-];
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollElements = document.querySelectorAll(".scroll-popup");
 
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+    };
 
-const typing = document.getElementById("typing");
+    const displayScrollElement = (element) => {
+        element.classList.add("reveal");
+    };
 
-function typeEffect() {
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.15)) {
+                displayScrollElement(el);
+            }
+        });
+    };
 
-    let currentWord = words[wordIndex];
-
-    if (!isDeleting) {
-
-        typing.textContent =
-            currentWord.substring(0, charIndex + 1);
-
-        charIndex++;
-
-        if (charIndex === currentWord.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-
-    } else {
-
-        typing.textContent =
-            currentWord.substring(0, charIndex - 1);
-
-        charIndex--;
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            wordIndex =
-                (wordIndex + 1) % words.length;
-        }
-    }
-
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
-}
-
-typeEffect();
-particlesJS("particles-js",{
-
-particles:{
-number:{
-value:80
-},
-
-size:{
-value:3
-},
-
-move:{
-speed:2
-},
-
-line_linked:{
-enable:true
-}
-}
-
+    window.addEventListener("scroll", () => { 
+        handleScrollAnimation();
+    });
+    
+    // Trigger once on load to show elements already on screen
+    handleScrollAnimation();
 });
+

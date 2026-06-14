@@ -3,59 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mannem saiteja | Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <a href="#" class="logo">MyPortfolio</a>
-        <nav class="navbar">
-            <a href="# "  style="--i:1;" class="active">Home</a>
-            <a href="#" style="--i:2;"> About</a>
-            <a href="#" style="--i:3;"> Skills</a>
-            <a href="#" style="--i:4;"> Contact</a>
+    <div class="bg-animation"></div>
+
+    <header>
+        <nav>
+            <h2 class="logo">UPS</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
     </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's me</h3>
-            <h1>MANNEM SAITEJA</h1>
-            <h3>And I'm a <span class="multiple-text"></span> </h3>
-            <p>
-                DEVOPS INTERN (B.Tech ECE, 2022–26) passionate about CI/CD pipeline, scalable architectures & AI projects. Skilled in linux and eager to solve real-world problems with innovative architecture using AWS.
-            </p>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
+        <div class="hero-content">
 
+            
+<section id="home" class="hero">
 
-            <div class="social-media">
-                <a href="#" style="--i:7;"> <i class="bx bxl-facebook"></i></a>
-                <a href="#" style="--i:8;"  ><i class="bx bxl-twitter"></i></a>
-                <a href="#" style="--i:9;"><i class="bx bxl-instagram-alt"></i></a>
-                <a href="https://www.linkedin.com/in/saiteja-m-4b757a285/" style="--i:10;"><i class="bx bxl-linkedin"></i></a>
-                <!-- <a href=""></a> -->
+    <div class="hero-image">
+        <img src="PHOTO.png" alt="Ujjwal">
+    </div>
+
+    <div class="hero-content">
+
+        <h1>Hello, I'm <span>saiteja</span></h1>
+
+        <h2>
+            I'm a <span id="typing"></span>
+        </h2>
+
+        <p>
+            AWS cloud practionar |
+            Cloud & DevOps intern |
+            Design perfectionism |
+            AI Enthusiast
+        </p>
+
+        <div class="hero-buttons">
+            <a href="resume.pdf" download class="btn">
+                Download Resume
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+
+    <h3>AWS Cloud</h3>
+
+    <div class="progress">
+        <span style="width:90%"></span>
+    </div>
+
+    <h3>Docker</h3>
+
+    <div class="progress">
+        <span style="width:85%"></span>
+    </div>
+
+    <h3>Kubernetes</h3>
+
+    <div class="progress">
+        <span style="width:0%"></span>
+    </div>
+
+    <h3>Python</h3>
+
+    <div class="progress">
+        <span style="width:70%"></span>
+    </div>
+
+</div>
+
+</section>
+
+       
+
+    </section>
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Embedded system and IOT</h3>
+                <p>
+                    drowsiness detection system,
+                    automatic active and passive alert.
+                </p>
             </div>
 
-            <a href="#" class="btn"> Download resume</a>
+            <div class="card">
+                <h3>home automation</h3>
+                <p>
+                    Remote control of all your home appliances
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>AI Agents</h3>
+                <p>
+                    AI-powered automation and business solutions.
+                </p>
+            </div>
 
         </div>
 
-        <div class="home-img">
-            <img src="PHOTO.png" alt="Some issues" height="400px" width="400px">
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="contact-box">
+
+            <p>Email: mannemsaiteja82@gmail.com</p>
+
+            <p>LinkedIn: www.linkedin.com/in/saiteja-m</p>
+
+            <p>GitHub: https://github.com/mannemsaiteja82</p>
+
         </div>
-        </section>
-    
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/dist/typed.min.js"></script>
-        <script src="script.js"></script>
 
+    </section>
 
-        
+    <script src="script.js"></script>
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </body>
-
 </html>
-
 
 

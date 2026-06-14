@@ -15,7 +15,7 @@ body {
     background-color: #000000;
     color: #e2e8f0;
     overflow-x: hidden;
-    perspective: 1000px; /* Activates 3D canvas rendering metrics */
+    perspective: 1000px; /* Activates global 3D space tracking matrix */
 }
 
 /* Engineering blueprint layout background canvas */
@@ -30,7 +30,7 @@ body {
     overflow: hidden;
 }
 
-/* Micro design grid pattern matrix line structures */
+/* Micro design grid pattern matrix line structures (unmixed) */
 .blueprint-grid {
     position: absolute;
     width: 100%;
@@ -53,7 +53,7 @@ body {
 .line-h1 { top: 30%; left: 0; width: 100%; height: 1px; }
 .line-h2 { bottom: 20%; left: 0; width: 100%; height: 1px; background: rgba(0, 212, 255, 0.12); }
 
-/* Tiny crosshair alignment points */
+/* Tiny crosshair alignment alignment points */
 .blueprint-crosshair {
     position: absolute;
     font-size: 14px;
@@ -85,7 +85,7 @@ header {
     top: 0;
     backdrop-filter: blur(12px);
     background: rgba(0, 0, 0, 0.7);
-    border-bottom: 2px solid #ef4444; 
+    border-bottom: 2px solid #ef4444; /* Tech red structural border line */
     z-index: 100;
 }
 
@@ -123,7 +123,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   3. 3D Circular Portrait Isometric System Framework (Hero Section)
+   3. 3D Circular Portrait Isometric System Framework
    ========================================================================== */
 .hero {
     min-height: 100vh;
@@ -143,11 +143,11 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transform-style: preserve-3d;
-    transform: rotateX(15deg) rotateY(-15deg); /* Isometric tilt matrix angle */
+    transform: rotateX(15deg) rotateY(-15deg); /* Isometric 3D angle setup */
     animation: floatingPlatform 6s ease-in-out infinite;
 }
 
-/* Original structural dashed ring */
+/* High-tech 3D light rings that spin underneath the circular photo avatar */
 .hero-image-3d-ring {
     position: absolute;
     width: 340px;
@@ -165,7 +165,7 @@ nav ul li a:hover {
     height: 300px;
     border-radius: 50%;
     padding: 6px;
-    background: linear-gradient(135deg, #00d4ff, #ef4444); /* Cyberpunk neon rim */
+    background: linear-gradient(135deg, #00d4ff, #ef4444); /* Clean neon split accent boundaries */
     transform-style: preserve-3d;
     transform: translateZ(10px);
     box-shadow: 
@@ -177,11 +177,12 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%; /* Pure Circle Shape Profile Conversion */
+    border-radius: 50%; /* Perfect geometric circle profile shape configuration */
     background-color: #070f1a;
     display: block;
 }
 
+/* Multi-axis animation frames */
 @keyframes floatingPlatform {
     0%, 100% { transform: rotateX(12deg) rotateY(-12deg) translateY(0px); }
     50% { transform: rotateX(16deg) rotateY(-16deg) translateY(-15px); }
@@ -419,4 +420,117 @@ section {
     border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: #ef4444;
+    transition: .3s;
+}
 
+.passion-card:hover .passion-icon { 
+    background: #ef4444; 
+    color: white; 
+    transform: rotate(10deg); 
+}
+
+.passion-card h3 { 
+    margin-bottom: 12px; 
+    font-size: 1.4rem; 
+    color: #ffffff; 
+}
+
+.passion-card p { 
+    color: #94a3b8; 
+    font-size: 0.95rem; 
+    line-height: 1.6; 
+}
+
+/* ==========================================================================
+   8. Contact Infrastructure Area
+   ========================================================================== */
+.contact-box {
+    text-align: center;
+    line-height: 2.6;
+    font-size: 1.1rem;
+    background: #070f1a;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 8px;
+    border-bottom: 4px solid #ef4444;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.contact-box a { 
+    color: #00d4ff; 
+    text-decoration: none; 
+    transition: .2s; 
+}
+
+.contact-box a:hover { 
+    color: #ef4444; 
+}
+
+/* ==========================================================================
+   9. Pure CSS Scroll-Driven Popup Animations (No Javascript Needed)
+   ========================================================================== */
+.css-slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@supports (animation-timeline: view()) {
+    .css-slide-up {
+        animation: fadeAndSlideIn linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+}
+
+@keyframes fadeAndSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================================
+   10. Media Query Responsive Interface Breakpoints
+   ========================================================================== */
+@media(max-width: 768px) {
+    body { 
+        background: #070f1a; 
+    }
+    
+    .hero { 
+        padding-top: 160px; 
+        text-align: center; 
+        gap: 40px; 
+    }
+    
+    .hero-content h1 { 
+        font-size: 2.6rem; 
+    }
+    
+    .btn-outline { 
+        margin-left: 0; 
+        margin-top: 15px; 
+    }
+    
+    nav { 
+        flex-direction: column; 
+        gap: 12px; 
+    }
+    
+    nav ul { 
+        margin-top: 10px; 
+    }
+    
+    section { 
+        padding: 60px 6%; 
+    }
+}

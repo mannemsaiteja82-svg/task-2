@@ -427,4 +427,33 @@ section {
         padding: 60px 6%; 
     }
 }
+/* ==========================================================================
+   10. Pure CSS Scroll-Driven Popup Animations (No Javascript Needed)
+   ========================================================================== */
+
+/* Base container animation rules */
+.css-slide-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* If the user's browser supports modern scroll animations, use interactive entry triggers */
+@supports (animation-timeline: view()) {
+    .css-slide-up {
+        animation: fadeAndSlideIn linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+}
+
+@keyframes fadeAndSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 

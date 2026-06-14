@@ -4,307 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mannem Saiteja | Portfolio</title>
-    <!-- FontAwesome & Google Fonts Integration -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Icon and Font Assets -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="https://googleapis.com">
-
-    <!-- Embedded CSS to instantly bypass S3 MIME-Type/Metadata block bugs -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            /* Bold split layout background: pure solid pitch black and dark metallic slate blue */
-            background: linear-gradient(135deg, #000000 50%, #0b1524 50%);
-            background-attachment: fixed;
-            color: #e2e8f0;
-            overflow-x: hidden;
-        }
-
-        /* Ambient glowing background overlay layers */
-        .bg-animation {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 15% 25%, rgba(239, 68, 68, 0.08), transparent 35%),
-                radial-gradient(circle at 85% 75%, rgba(0, 212, 255, 0.08), transparent 35%);
-            z-index: -1;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            backdrop-filter: blur(12px);
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 2px solid #ef4444; /* Tech red structural border line */
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 10%;
-        }
-
-        .logo {
-            color: #00d4ff;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li { margin-left: 25px; }
-        nav ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: .3s;
-        }
-        nav ul li a:hover { color: #ef4444; }
-
-        /* Hero Framework */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            padding: 140px 10% 60px 10%;
-        }
-
-        .hero-image img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #00d4ff;
-            box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .hero-content h1 { font-size: 3.8rem; color: #ffffff; }
-        .hero-content span { color: #00d4ff; }
-        .hero-content h2 { margin: 10px 0 15px; font-size: 1.8rem; color: #94a3b8; }
-
-        /* AWS Target Badge Component */
-        .aws-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 153, 0, 0.1);
-            border: 1px solid #ff9900;
-            color: #ff9900;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p { max-width: 650px; line-height: 1.8; color: #cbd5e1; }
-
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 28px;
-            background: #ef4444;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: .3s;
-            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
-        }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5); }
-        
-        .btn-outline {
-            background: transparent;
-            color: #ef4444;
-            border: 2px solid #ef4444;
-            box-shadow: none;
-            margin-left: 15px;
-        }
-        .btn-outline:hover { background: rgba(239, 68, 68, 0.1); color: white; }
-
-        /* Universal Section Sizing */
-        section { padding: 90px 10%; }
-        .section-title {
-            text-align: center;
-            font-size: 2.4rem;
-            margin-bottom: 60px;
-            color: #ffffff;
-            position: relative;
-        }
-        /* Perfectionist Red Accent Underlines */
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #ef4444;
-            box-shadow: 0 0 8px #ef4444;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #64748b;
-            margin-top: -45px;
-            margin-bottom: 50px;
-            font-size: 1rem;
-        }
-
-        /* Technical Mastery Skills Layout */
-        .skill {
-            max-width: 700px;
-            margin: auto;
-            background: #070f1a;
-            padding: 40px;
-            border-radius: 8px;
-            border-right: 4px solid #ef4444;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .skill h3 { font-size: 1rem; margin-bottom: 8px; color: #94a3b8; }
-        
-        .progress {
-            background: #111827;
-            height: 10px;
-            border-radius: 20px;
-            margin-bottom: 25px;
-        }
-        .progress span {
-            display: block;
-            height: 100%;
-            border-radius: 20px;
-            background: linear-gradient(90deg, #ef4444, #00d4ff);
-        }
-
-        /* Dynamic Grid Layout cards */
-        .cards, .passions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            padding: 35px 30px;
-            border-radius: 8px;
-            background: #070f1a;
-            border-left: 4px solid #ef4444;
-            transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(239, 68, 68, 0.15); }
-        .card-icon { font-size: 2rem; color: #00d4ff; margin-bottom: 15px; }
-        .card h3 { margin-bottom: 12px; color: #ffffff; font-size: 1.3rem; }
-        .card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
-
-        /* Creative Passions Theme Framework */
-        .passion-card {
-            background: #070f1a;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: .4s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        }
-        .passion-card::before {
-            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: #ef4444; transform: scaleX(0); transition: .4s;
-        }
-        .passion-card:hover::before { transform: scaleX(1); }
-        .passion-card:hover { transform: translateY(-5px); background: #0b1626; }
-        
-        .passion-icon {
-            width: 70px;
-            height: 70px;
-            line-index: 70px;
-            background: rgba(239, 68, 68, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: #ef4444;
-            transition: .3s;
-        }
-        .passion-card:hover .passion-icon { background: #ef4444; color: white; transform: rotate(10deg); }
-        .passion-card h3 { margin-bottom: 12px; font-size: 1.4rem; color: #ffffff; }
-        .passion-card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
-
-        /* Contact Wrapper */
-        .contact-box {
-            text-align: center;
-            line-height: 2.6;
-            font-size: 1.1rem;
-            background: #070f1a;
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 35px;
-            border-radius: 8px;
-            border-bottom: 4px solid #ef4444;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .contact-box a { color: #00d4ff; text-decoration: none; transition: .2s; }
-        .contact-box a:hover { color: #ef4444; }
-
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -2;
-        }
-
-        /* High-performance CSS Scroll Animations (Zero Lag) */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .scroll-reveal.reveal-active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Breakpoints */
-        @media(max-width:768px){
-            body { background: #070f1a; }
-            .hero { padding-top: 160px; text-align: center; gap: 40px; }
-            .hero-content h1 { font-size: 2.6rem; }
-            .btn-outline { margin-left: 0; margin-top: 15px; }
-            nav { flex-direction: column; gap: 12px; }
-            nav ul { margin-top: 10px; }
-            section { padding: 60px 6%; }
-        }
-    </style>
+    <!-- Link to your working external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-        <!-- Place this right before the closing </body> tag -->
-    <script src="./script.js"></script>
+<body>
+
+    <div class="bg-animation"></div>
+
+    <header>
+        <nav>
+            <h2 class="logo">MS</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#passions">Passions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <img src="PHOTO.jpg" alt="saiteja">
+        </div>
+
+        <div class="hero-content">
+            <!-- AWS Target Badge Component -->
+            <div class="aws-badge">
+                <i class="fas fa-layer-group"></i> Pursuing AWS Certified Solutions Architect – Associate
+            </div>
+            
+            <h1>Hello, I'm <span>saiteja</span></h1>
+            <h2>I'm a Developer & Designer</h2>
+
+            <p>
+                AWS Cloud Practitioner |
+                Cloud & DevOps Intern |
+                Design Perfectionism |
+                AI Enthusiast
+            </p>
+
+            <div class="hero-buttons">
+                <a href="resume.pdf" download class="btn">Download Resume</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill css-slide-up">
+            <h3>AWS Cloud</h3>
+            <div class="progress"><span style="width:90%"></span></div>
+
+            <h3>Docker</h3>
+            <div class="progress"><span style="width:85%"></span></div>
+
+            <h3>Kubernetes</h3>
+            <div class="progress"><span style="width:45%"></span></div>
+
+            <h3>Python</h3>
+            <div class="progress"><span style="width:70%"></span></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="cards">
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Embedded system and IOT</h3>
+                <p>Drowsiness detection system, featuring automatic active and passive real-time alerting nodes.</p>
+            </div>
+
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-house-laptop"></i></div>
+                <h3>Home Automation</h3>
+                <p>Robust structural architecture enabling seamless secure remote control of home appliances.</p>
+            </div>
+
+            <div class="card css-slide-up">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI Agents</h3>
+                <p>AI-powered procedural execution scripts, automation tools, and targeted optimization layouts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Perfectionism & Hobbies Section -->
+    <section id="passions">
+        <h2 class="section-title">Design & Passions</h2>
+        <p class="section-subtitle">The creative inspirations that power my engineering logic</p>
+        
+        <div class="passions-grid">
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-bezier-curve"></i></div>
+                <h3>Design Perfectionism</h3>
+                <p>Obsessed with sharp alignment, balanced content structures, responsive layouts, and clean user interfaces.</p>
+            </div>
+
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-book-open"></i></div>
+                <h3>Novel Devotee</h3>
+                <p>Deeply captivated by complex storylines, worldbuilding mechanics, and structural narratives across epic novels.</p>
+            </div>
+
+            <div class="passion-card css-slide-up">
+                <div class="passion-icon"><i class="fas fa-tv"></i></div>
+                <h3>Anime & Art</h3>
+                <p>Inspired by the elite framing layout styles, dynamic kinetic animation, and vivid color schemes of anime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-box css-slide-up">
+            <p><i class="fas fa-envelope" style="color: #ef4444; margin-right: 8px;"></i> Email: mannemsaiteja82@gmail.com</p>
+            <p><i class="fab fa-linkedin" style="color: #00d4ff; margin-right: 8px;"></i> LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></p>
+            <p><i class="fab fa-github" style="color: #ffffff; margin-right: 8px;"></i> GitHub: <a href="https://github.com" target="_blank">://github.com</a></p>
+        </div>
+    </section>
+
 </body>
 </html>
+
 

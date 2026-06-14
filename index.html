@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Mannem saiteja | Portfolio</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mannem Saiteja | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div id="particles-js"></div>
     <div class="bg-animation"></div>
 
     <header>
         <nav>
-            <h2 class="logo">UPS</h2>
-
+            <h2 class="logo">MS</h2>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#passions">Passions</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -28,147 +27,120 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-image">
+            <!-- Updated to match your exact file name case -->
+            <img src="PHOTO.jpg" alt="Saiteja">
+        </div>
 
         <div class="hero-content">
-
-            
-<section id="home" class="hero">
-
-    <div class="hero-image">
-        <img src="PHOTO.jpg" alt="saiteja">
-    </div>
-
-    <div class="hero-content">
-
-        <h1>Hello, I'm <span>saiteja</span></h1>
-
-        <h2>
-            I'm a <span id="typing"></span>
-        </h2>
-
-        <p>
-            AWS cloud practionar |
-            Cloud & DevOps intern |
-            Design perfectionism |
-            AI Enthusiast
-        </p>
-
-        <div class="hero-buttons">
-            <a href="resume.pdf" download class="btn">
-                Download Resume
-            </a>
-
-            <a href="#contact" class="btn btn-outline">
-                Contact Me
-            </a>
+            <h1>Hello, I'm <span>Saiteja</span></h1>
+            <h2>I'm a <span id="typing"></span></h2>
+            <div class="target-badge">
+                <i class="fas fa-graduation-cap"></i> Pursuing AWS Certified Solutions Architect – Associate
+            </div>
+            <p>
+                AWS Cloud Practitioner |
+                Cloud & DevOps Intern |
+                Design Perfectionism |
+                AI Enthusiast
+            </p>
+            <div class="hero-buttons">
+                <a href="resume.pdf" download class="btn">Download Resume</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
         </div>
-
-    </div>
-
-</section>
-
-        </div>
-
     </section>
 
-    <!-- Skills -->
-
+    <!-- Skills Section -->
     <section id="skills">
+        <h2 class="section-title">Technical Mastery</h2>
+        <div class="skill">
+            <h3>AWS Cloud</h3>
+            <div class="progress"><span style="width:90%"></span></div>
 
-<section id="skills">
+            <h3>Docker</h3>
+            <div class="progress"><span style="width:85%"></span></div>
 
-<h2 class="section-title">Skills</h2>
+            <h3>Kubernetes</h3>
+            <div class="progress"><span style="width:40%"></span></div>
 
-<div class="skill">
-
-    <h3>AWS Cloud</h3>
-
-    <div class="progress">
-        <span style="width:90%"></span>
-    </div>
-
-    <h3>Docker</h3>
-
-    <div class="progress">
-        <span style="width:85%"></span>
-    </div>
-
-    <h3>Kubernetes</h3>
-
-    <div class="progress">
-        <span style="width:0%"></span>
-    </div>
-
-    <h3>Python</h3>
-
-    <div class="progress">
-        <span style="width:70%"></span>
-    </div>
-
-</div>
-
-</section>
-
-       
-
+            <h3>Python</h3>
+            <div class="progress"><span style="width:70%"></span></div>
+        </div>
     </section>
 
-    <!-- Projects -->
-
+    <!-- Projects Section -->
     <section id="projects">
-
         <h2 class="section-title">Projects</h2>
-
         <div class="cards">
-
-            <div class="card">
-                <h3>Embedded system and IOT</h3>
-                <p>
-                    drowsiness detection system,
-                    automatic active and passive alert.
-                </p>
+            <div class="card scroll-popup">
+                <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Embedded System & IoT</h3>
+                <p>Drowsiness detection system featuring automatic active and passive alerts.</p>
             </div>
 
-            <div class="card">
-                <h3>home automation</h3>
-                <p>
-                    Remote control of all your home appliances
-                </p>
+            <div class="card scroll-popup">
+                <div class="card-icon"><i class="fas fa-home"></i></div>
+                <h3>Home Automation</h3>
+                <p>Smart system enabling seamless remote control of all home appliances.</p>
             </div>
 
-            <div class="card">
+            <div class="card scroll-popup">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
                 <h3>AI Agents</h3>
-                <p>
-                    AI-powered automation and business solutions.
-                </p>
+                <p>AI-powered custom automation engineering and business optimization solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Creative Passions Section -->
+    <section id="passions">
+        <h2 class="section-title">Creative Passions</h2>
+        <p class="section-subtitle">How I fuel my design perfectionism and imagination</p>
+        
+        <div class="passions-grid">
+            <div class="passion-card scroll-popup anime-theme">
+                <div class="card-overlay"></div>
+                <div class="passion-content">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Anime World</h3>
+                    <p>Fascinated by high-concept visual worlds, kinetic directing, and flawless animation frames.</p>
+                </div>
             </div>
 
-        </div>
+            <div class="passion-card scroll-popup novel-theme">
+                <div class="card-overlay"></div>
+                <div class="passion-content">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Novel Devotee</h3>
+                    <p>Drawn deep into intricate story-weaving, immersive worldbuilding, and profound character psychology.</p>
+                </div>
+            </div>
 
+            <div class="passion-card scroll-popup design-theme">
+                <div class="card-overlay"></div>
+                <div class="passion-content">
+                    <i class="fas fa-bezier-curve"></i>
+                    <h3>Design Perfectionism</h3>
+                    <p>obsessed with alignment, balanced layouts, sleek micro-interactions, and neon aesthetics.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact -->
-
+    <!-- Contact Section -->
     <section id="contact">
-
         <h2 class="section-title">Let's Connect</h2>
-
-        <div class="contact-box">
-
-            <p>Email: mannemsaiteja82@gmail.com</p>
-
-            <p>LinkedIn: www.linkedin.com/in/saiteja-m</p>
-
-            <p>GitHub: https://github.com/mannemsaiteja82</p>
-
+        <div class="contact-box scroll-popup">
+            <p><i class="fas fa-envelope"></i> Email: mannemsaiteja82@gmail.com</p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/saiteja-m</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/mannemsaiteja82" target="_blank">github.com/mannemsaiteja82</a></p>
         </div>
-
     </section>
 
+    <!-- Scripts Container Layer -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="script.js"></script>
-<div id="particles-js"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </body>
 </html>
 

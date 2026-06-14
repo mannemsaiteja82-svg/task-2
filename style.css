@@ -138,6 +138,11 @@ nav ul li a:hover {
     box-shadow: 
         -10px 15px 30px rgba(0, 0, 0, 0.7),
         0 0 40px rgba(239, 68, 68, 0.2);
+
+    /* Added dynamic flex properties to perfectly center your portrait photo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {

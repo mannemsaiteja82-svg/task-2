@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Deep Dark Neon Metallic Blue Background Setup
+   1. Premium Black & Blue Gradient Background Setup
    ========================================================================== */
 @import url('https://googleapis.com');
 
@@ -18,27 +18,27 @@ body {
     perspective: 1000px;
 }
 
-/* Crisp 135-degree angle split: Pitch Black to a Deep Dark Metallic Neon Steel Blue */
+/* Deep, smooth transition from pure solid black to a rich electric blue */
 .blueprint-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #000000 45%, #051329 45%);
+    background: linear-gradient(135deg, #000000 30%, #002244 70%, #005588 100%);
     background-attachment: fixed;
     z-index: -2;
     overflow: hidden;
 }
 
-/* Deep, rich dark electric blue sapphire neon aura layer */
+/* Vibrant ambient neon depth overlays to tie the design layers together */
 .bg-animation {
     position: fixed;
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 85% 25%, rgba(0, 68, 255, 0.18), transparent 45%), /* Dark Sapphire Neon Glow */
-        radial-gradient(circle at 15% 75%, rgba(239, 68, 68, 0.05), transparent 45%); /* Soft Accent Red Core */
+        radial-gradient(circle at 85% 25%, rgba(0, 188, 255, 0.25), transparent 50%), /* Bright Cyan-Blue Aura */
+        radial-gradient(circle at 15% 75%, rgba(239, 68, 68, 0.05), transparent 45%); /* Soft Base Red Core */
     z-index: -1;
     pointer-events: none;
 }

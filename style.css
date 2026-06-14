@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Base Configuration & System Core
+   1. Advanced Design Perfectionism Blueprint Background Setup
    ========================================================================== */
 @import url('https://googleapis.com');
 
@@ -12,22 +12,68 @@
 }
 
 body {
-    /* Bold split layout background: pure solid pitch black and dark metallic slate blue */
-    background: linear-gradient(135deg, #000000 50%, #0b1524 50%);
-    background-attachment: fixed;
+    background-color: #000000;
     color: #e2e8f0;
     overflow-x: hidden;
+    perspective: 1000px; /* Activates 3D canvas rendering metrics */
 }
 
-/* Ambient glowing background overlay layers */
+/* Engineering blueprint layout background canvas */
+.blueprint-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #020617;
+    z-index: -2;
+    overflow: hidden;
+}
+
+/* Micro design grid pattern matrix line structures */
+.blueprint-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(15, 32, 67, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 32, 67, 0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Sharp structural geometric marker lines to show design layout grids */
+.blueprint-line {
+    position: absolute;
+    background: rgba(239, 68, 68, 0.12); /* Crimson technical alignment lines */
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
+}
+
+.line-v1 { left: 15%; top: 0; width: 1px; height: 100%; }
+.line-v2 { right: 25%; top: 0; width: 1px; height: 100%; background: rgba(0, 212, 255, 0.12); }
+.line-h1 { top: 30%; left: 0; width: 100%; height: 1px; }
+.line-h2 { bottom: 20%; left: 0; width: 100%; height: 1px; background: rgba(0, 212, 255, 0.12); }
+
+/* Tiny crosshair alignment points */
+.blueprint-crosshair {
+    position: absolute;
+    font-size: 14px;
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.2);
+    user-select: none;
+}
+.cx1 { left: 15%; top: 30%; transform: translate(-50%, -50%); }
+.cx2 { right: 25%; bottom: 20%; transform: translate(-50%, -50%); color: #ef4444; }
+
+/* Dynamic subtle ambient depth glow circles */
 .bg-animation {
     position: fixed;
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 15% 25%, rgba(239, 68, 68, 0.08), transparent 35%),
-        radial-gradient(circle at 85% 75%, rgba(0, 212, 255, 0.08), transparent 35%);
+        radial-gradient(circle at 75% 20%, rgba(0, 212, 255, 0.08), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.08), transparent 40%);
     z-index: -1;
+    pointer-events: none;
 }
 
 #particles-js {
@@ -36,7 +82,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -3;
 }
 
 /* ==========================================================================
@@ -48,7 +94,7 @@ header {
     top: 0;
     backdrop-filter: blur(12px);
     background: rgba(0, 0, 0, 0.7);
-    border-bottom: 2px solid #ef4444; /* Tech red structural border line */
+    border-bottom: 2px solid #ef4444; 
     z-index: 100;
 }
 
@@ -86,7 +132,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   3. Hero Framework & Target Badging
+   3. 3D Circular Portrait Isometric System Framework (Hero Section)
    ========================================================================== */
 .hero {
     min-height: 100vh;
@@ -98,19 +144,61 @@ nav ul li a:hover {
     padding: 140px 10% 60px 10%;
 }
 
-.hero-image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #00d4ff;
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
-    animation: float 4s ease-in-out infinite;
+.hero-image-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(-15deg); /* Isometric tilt matrix angle */
+    animation: floatingPlatform 6s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
+/* High-tech dashed target rings spinning underneath the photo structure */
+.hero-image-3d-ring {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+    transform: translateZ(-20px);
+    animation: spinRing 20s linear infinite;
+}
+
+.hero-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #00d4ff, #ef4444); /* Cyberpunk neon rim */
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+    box-shadow: 
+        -10px 15px 30px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(239, 68, 68, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Pure Circle Shape Profile Conversion */
+    background-color: #070f1a;
+    display: block;
+}
+
+@keyframes floatingPlatform {
+    0%, 100% { transform: rotateX(12deg) rotateY(-12deg) translateY(0px); }
+    50% { transform: rotateX(16deg) rotateY(-16deg) translateY(-15px); }
+}
+
+@keyframes spinRing {
+    from { transform: translateZ(-20px) rotate(0deg); }
+    to { transform: translateZ(-20px) rotate(360deg); }
 }
 
 .hero-content h1 { 
@@ -333,127 +421,4 @@ section {
     background: #0b1626; 
 }
 
-.passion-icon {
-    width: 70px;
-    height: 70px;
-    background: rgba(239, 68, 68, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 1.8rem;
-    color: #ef4444;
-    transition: .3s;
-}
-
-.passion-card:hover .passion-icon { 
-    background: #ef4444; 
-    color: white; 
-    transform: rotate(10deg); 
-}
-
-.passion-card h3 { 
-    margin-bottom: 12px; 
-    font-size: 1.4rem; 
-    color: #ffffff; 
-}
-
-.passion-card p { 
-    color: #94a3b8; 
-    font-size: 0.95rem; 
-    line-height: 1.6; 
-}
-
-/* ==========================================================================
-   8. Contact Infrastructure Area
-   ========================================================================== */
-.contact-box {
-    text-align: center;
-    line-height: 2.6;
-    font-size: 1.1rem;
-    background: #070f1a;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 35px;
-    border-radius: 8px;
-    border-bottom: 4px solid #ef4444;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.contact-box a { 
-    color: #00d4ff; 
-    text-decoration: none; 
-    transition: .2s; 
-}
-
-.contact-box a:hover { 
-    color: #ef4444; 
-}
-
-/* ==========================================================================
-   9. Media Query Responsive Interface BREAKPOINTS
-   ========================================================================== */
-@media(max-width: 768px) {
-    body { 
-        background: #070f1a; 
-    }
-    
-    .hero { 
-        padding-top: 160px; 
-        text-align: center; 
-        gap: 40px; 
-    }
-    
-    .hero-content h1 { 
-        font-size: 2.6rem; 
-    }
-    
-    .btn-outline { 
-        margin-left: 0; 
-        margin-top: 15px; 
-    }
-    
-    nav { 
-        flex-direction: column; 
-        gap: 12px; 
-    }
-    
-    nav ul { 
-        margin-top: 10px; 
-    }
-    
-    section { 
-        padding: 60px 6%; 
-    }
-}
-/* ==========================================================================
-   10. Pure CSS Scroll-Driven Popup Animations (No Javascript Needed)
-   ========================================================================== */
-
-/* Base container animation rules */
-.css-slide-up {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* If the user's browser supports modern scroll animations, use interactive entry triggers */
-@supports (animation-timeline: view()) {
-    .css-slide-up {
-        animation: fadeAndSlideIn linear both;
-        animation-timeline: view();
-        animation-range: entry 5% cover 30%;
-    }
-}
-
-@keyframes fadeAndSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 

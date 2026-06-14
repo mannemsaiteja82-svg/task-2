@@ -1,6 +1,9 @@
 /* ==========================================================================
    1. Advanced Design Perfectionism Blueprint Background Setup
    ========================================================================== */
+/* ==========================================================================
+   1. Advanced Design Perfectionism Blueprint Background Setup
+   ========================================================================== */
 @import url('https://googleapis.com');
 
 * {
@@ -15,17 +18,18 @@ body {
     background-color: #000000;
     color: #e2e8f0;
     overflow-x: hidden;
-    perspective: 1000px; /* Activates 3D canvas rendering metrics */
+    perspective: 1000px;
 }
 
-/* Engineering blueprint layout background canvas */
+/* Updated Background Canvas with Your Custom Metallic Blueprint Image */
 .blueprint-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #020617;
+    background: url('./bg.jpg') no-repeat center center;
+    background-size: cover;
     z-index: -2;
     overflow: hidden;
 }
@@ -36,44 +40,10 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(15, 32, 67, 0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 32, 67, 0.4) 1px, transparent 1px);
+        linear-gradient(rgba(15, 32, 67, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 32, 67, 0.2) 1px, transparent 1px);
     background-size: 40px 40px;
-}
-
-/* Sharp structural geometric marker lines to show design layout grids */
-.blueprint-line {
-    position: absolute;
-    background: rgba(239, 68, 68, 0.12); /* Crimson technical alignment lines */
-    box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
-}
-
-.line-v1 { left: 15%; top: 0; width: 1px; height: 100%; }
-.line-v2 { right: 25%; top: 0; width: 1px; height: 100%; background: rgba(0, 212, 255, 0.12); }
-.line-h1 { top: 30%; left: 0; width: 100%; height: 1px; }
-.line-h2 { bottom: 20%; left: 0; width: 100%; height: 1px; background: rgba(0, 212, 255, 0.12); }
-
-/* Tiny crosshair alignment points */
-.blueprint-crosshair {
-    position: absolute;
-    font-size: 14px;
-    font-family: monospace;
-    color: rgba(255, 255, 255, 0.2);
-    user-select: none;
-}
-.cx1 { left: 15%; top: 30%; transform: translate(-50%, -50%); }
-.cx2 { right: 25%; bottom: 20%; transform: translate(-50%, -50%); color: #ef4444; }
-
-/* Dynamic subtle ambient depth glow circles */
-.bg-animation {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 75% 20%, rgba(0, 212, 255, 0.08), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.08), transparent 40%);
-    z-index: -1;
-    pointer-events: none;
+    opacity: 0.7; /* Softened to let your background image highlights pop */
 }
 
 /* ==========================================================================

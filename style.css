@@ -383,6 +383,9 @@ section {
 /* ==========================================================================
    7. Creative Passions Framework
    ========================================================================== */
+/* ==========================================================================
+   7. Creative Passions Framework (High-Intensity Neon Variant)
+   ========================================================================== */
 .passions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -390,68 +393,108 @@ section {
 }
 
 .passion-card {
-    background: #070f1a;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    padding: 40px 30px;
+    background: linear-gradient(135deg, rgba(7, 15, 26, 0.85) 0%, rgba(0, 188, 255, 0.05) 100%);
+    border: 1px solid rgba(0, 188, 255, 0.15); /* Sleek neon blue glass edge */
+    border-radius: 16px;
+    padding: 45px 30px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: .4s ease;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
+/* Subtle glowing accent dot inside the top corner of the card */
+.passion-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    background: #00bcff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00bcff;
+    opacity: 0.4;
+    transition: 0.3s ease;
+}
+
+/* Bottom neon border strip highlight */
 .passion-card::before {
     content: ''; 
     position: absolute; 
     bottom: 0; 
-    left: 0; 
-    width: 100%; 
+    left: 50%; 
+    width: 0; 
     height: 4px; 
-    background: #ef4444; 
-    transform: scaleX(0); 
-    transition: .4s;
+    background: linear-gradient(90deg, #00bcff, #ef4444);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+/* Hover Interactive Transforms */
+.passion-card:hover { 
+    transform: translateY(-10px) scale(1.02); 
+    background: linear-gradient(135deg, rgba(11, 22, 38, 0.95) 0%, rgba(0, 188, 255, 0.1) 100%);
+    border-color: rgba(0, 188, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 188, 255, 0.15), 0 0 30px rgba(239, 68, 68, 0.05); 
 }
 
 .passion-card:hover::before { 
-    transform: scaleX(1); 
+    left: 10%;
+    width: 80%; 
 }
 
-.passion-card:hover { 
-    transform: translateY(-5px); 
-    background: #0b1626; 
+.passion-card:hover::after {
+    background: #ef4444;
+    box-shadow: 0 0 10px #ef4444;
+    opacity: 1;
 }
 
+/* High-contrast animated icon containers */
 .passion-icon {
-    width: 70px;
-    height: 70px;
-    background: rgba(239, 68, 68, 0.1);
+    width: 75px;
+    height: 75px;
+    background: rgba(0, 188, 255, 0.08);
+    border: 1px solid rgba(0, 188, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 1.8rem;
-    color: #ef4444;
-    transition: .3s;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    color: #00bcff; /* Matches primary neon background color */
+    box-shadow: 0 0 15px rgba(0, 188, 255, 0.1);
+    transition: all 0.4s ease;
 }
 
 .passion-card:hover .passion-icon { 
-    background: #ef4444; 
-    color: white; 
-    transform: rotate(10deg); 
+    background: linear-gradient(135deg, #00bcff, #ef4444);
+    color: #ffffff; 
+    border-color: transparent;
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 188, 255, 0.5);
 }
 
 .passion-card h3 { 
-    margin-bottom: 12px; 
-    font-size: 1.4rem; 
+    margin-bottom: 14px; 
+    font-size: 1.45rem; 
     color: #ffffff; 
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+.passion-card:hover h3 {
+    color: #00bcff;
 }
 
 .passion-card p { 
     color: #94a3b8; 
     font-size: 0.95rem; 
-    line-height: 1.6; 
+    line-height: 1.7; 
 }
 
 /* ==========================================================================

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Clean Dark Neon Metallic Background Setup
+   1. Deep Dark Neon Metallic Blue Background Setup
    ========================================================================== */
 @import url('https://googleapis.com');
 
@@ -18,27 +18,27 @@ body {
     perspective: 1000px;
 }
 
-/* Sharp, unmixed split background using pure black and dark neon metallic blue */
+/* Crisp 135-degree angle split: Pitch Black to a Deep Dark Metallic Neon Steel Blue */
 .blueprint-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #000000 50%, #06101e 50%);
+    background: linear-gradient(135deg, #000000 45%, #051329 45%);
     background-attachment: fixed;
     z-index: -2;
     overflow: hidden;
 }
 
-/* Subtle, deep ambient neon glows that sit cleanly on top of the layout shades */
+/* Deep, rich dark electric blue sapphire neon aura layer */
 .bg-animation {
     position: fixed;
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 85% 20%, rgba(0, 212, 255, 0.05), transparent 45%), /* Cyber Blue Glow */
-        radial-gradient(circle at 15% 80%, rgba(239, 68, 68, 0.05), transparent 45%); /* Crimson Red Glow */
+        radial-gradient(circle at 85% 25%, rgba(0, 68, 255, 0.18), transparent 45%), /* Dark Sapphire Neon Glow */
+        radial-gradient(circle at 15% 75%, rgba(239, 68, 68, 0.05), transparent 45%); /* Soft Accent Red Core */
     z-index: -1;
     pointer-events: none;
 }

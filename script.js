@@ -1,23 +1,69 @@
+const words = [
+    "Cloud Engineer",
+    "DevOps Engineer",
+    "design perfectionism",
+    "AI Enthusiast"
+];
 
-var typed= new Typed(".multiple-text",{
-    strings: [
-        "Cloud and devops",
-        "Containerization",
-        "Scripting & Programming",
-        "AI & ML Enthusiast",
-    ],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay: 1000,
-    loop:true
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+
+    let currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+
+        typing.textContent =
+            currentWord.substring(0, charIndex + 1);
+
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+
+    } else {
+
+        typing.textContent =
+            currentWord.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex =
+                (wordIndex + 1) % words.length;
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+particlesJS("particles-js",{
+
+particles:{
+number:{
+value:80
+},
+
+size:{
+value:3
+},
+
+move:{
+speed:2
+},
+
+line_linked:{
+enable:true
+}
+}
+
 });
-
-
-
-// var typed= new Typed(".multiple-text",{
-//     strings: ["FrontEnd Developer ", "Backend Developer" , "Graphic Designer"],
-//     typeSpeed:100,
-//     backSpeed:100,
-//     backDelay: 1000,
-//     loop:true
-// })
